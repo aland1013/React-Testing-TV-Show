@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
-import Dropdown from 'react-dropdown';
 
 const SelectShow = (props) => {
   const [show, setShow] = useState('');
 
   const handleChange = (e) => {
     setShow(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    props.setSelectedShow(show);
+    props.setSelectedShow(e.target.value);
   };
 
   return (
@@ -23,7 +18,6 @@ const SelectShow = (props) => {
         <option value='the-americans'>The Americans</option>
         <option value='the-wire'>The Wire</option>
       </select>
-      <button onClick={handleSubmit}>get show data</button>
     </>
   );
 };
