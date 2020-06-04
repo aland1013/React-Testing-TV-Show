@@ -6,6 +6,7 @@ const SelectShow = (props) => {
   const handleChange = (e) => {
     setShow(e.target.value);
     props.setSelectedShow(e.target.value);
+    props.setSelectedSeason('');
   };
 
   return (

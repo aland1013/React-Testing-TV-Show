@@ -29,7 +29,10 @@ export default function App() {
 
   return (
     <>
-      <SelectShow setSelectedShow={setSelectedShow} />
+      <SelectShow
+        setSelectedShow={setSelectedShow}
+        setSelectedSeason={setSelectedSeason}
+      />
       {!show ? (
         <h2>Fetching data...</h2>
       ) : (
